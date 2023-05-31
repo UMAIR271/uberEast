@@ -1,0 +1,19 @@
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px;
+  background: white;
+}
+
+.rightIcons {
+  display: flex;
+  align-items: center;
+}
+
+.title {
+  width: 265px;
+  border-radius: 0px;
+  font-weight: bold;
+  font-size: 32px;
+}
