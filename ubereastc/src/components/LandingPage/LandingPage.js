@@ -57,11 +57,11 @@ export default function LandingPage() {
             position: "relative",
             width: "60%",
             marginLeft: "10%",
-            textAlign:"left"
+            textAlign: "left",
           }}
         >
-            <h1 className="header1"> Zeit, Essen zu bestellen</h1>
-            <h3 className="header2">Jetzt ein diazo in Deiner Nähe finden</h3>
+          <h1 className="header1"> Zeit, Essen zu bestellen</h1>
+          <h3 className="header2">Jetzt ein diazo in Deiner Nähe finden</h3>
           <div
             style={{
               display: "flex",
