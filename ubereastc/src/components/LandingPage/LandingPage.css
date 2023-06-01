@@ -1,0 +1,26 @@
+.leftPart:before {
+  content: "";
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  width: 100%;
+  height: 100%;
+  transform: rotateZ(10deg) scale(2) translateX(-30%);
+  transform-origin: center center;
+  background-color: #ffd600;
+}
+.header1 {
+  font-family: Be Vietnam Pro;
+  font-size: 48px;
+  font-weight: 800;
+  line-height: 56px;
+  letter-spacing: 0.005em;
+}
+.header2 {
+  font-family: Be Vietnam Pro;
+  font-size: 28px;
+  font-weight: 800;
+  line-height: 36px;
+  letter-spacing: 0.005em;
+}
