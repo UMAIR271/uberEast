@@ -19,7 +19,7 @@ export default function Header() {
       <div className="title">DIAZO</div>
       <div className="rightIcons">
       <Box sx={{...commonStyles, borderRadius: '16px' }}>
-          <IconFlagDE />
+          <IconFlagDE style={{borderRadius:"100%"}}/>
         </Box>
         <IconButton >
           <MenuIcon />

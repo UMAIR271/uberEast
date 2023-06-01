@@ -28,133 +28,148 @@ export default function LandingPage() {
   };
 
   return (
-    <div
-      style={{
-        position: "relative",
-        maxWidth: "1440px",
-        minHeight: "100vh",
-        margin: "0 auto",
-      }}
-    >
-      {/* Left Part */}
-      <div
-        className="leftPart"
+    <>
+      <section
         style={{
-          position: "absolute",
-          top: 0,
-          left: 0,
-          bottom: 0,
-          width: "70%",
-          display: "flex",
-          alignItems: "center",
-          justifyContent: "flex-start",
-          paddingTop: "60px",
-          overflow: "hidden",
+          position: "relative",
+          maxWidth: "1440px",
+          minHeight: "100vh",
+          margin: "0 auto",
         }}
       >
-        <section
+        {/* Left Part */}
+        <div
+          className="leftPart"
           style={{
-            position: "relative",
-            width: "60%",
-            marginLeft: "10%",
-            textAlign: "left",
+            position: "absolute",
+            top: 0,
+            left: 0,
+            bottom: 0,
+            width: "70%",
+            display: "flex",
+            alignItems: "center",
+            justifyContent: "flex-start",
+            paddingTop: "60px",
+            overflow: "hidden",
           }}
         >
-          <h1 className="header1"> Zeit, Essen zu bestellen</h1>
-          <h3 className="header2">Jetzt ein diazo in Deiner Nähe finden</h3>
-          <div
+          <section
             style={{
-              display: "flex",
-              alignItems: "center",
-
-              border: "1px solid #000",
-              borderRadius: "20px",
-              padding: "4px",
-              backgroundColor: "white",
+              position: "relative",
+              width: "60%",
+              marginLeft: "10%",
+              textAlign: "left",
             }}
           >
-            <IconButton
-              color="primary"
-              aria-label="menu"
-              style={{ padding: "8px" }}
-            >
-              <LocationOnIcon /> {/* Render the menu icon */}
-            </IconButton>
-            <input
-              type="text"
-              placeholder="Search City"
-              style={{
-                width: "calc(100% - 88px)", // Adjusted width considering the menu icon
-                height: "100%",
-                padding: "8px",
-                fontSize: "16px",
-                border: "none",
-                outline: "none",
-              }}
-              onChange={(e) => handleSearchChange(e.target.value)}
-            />
-            <button
-              type="button"
+            <h1 className="header1"> Zeit, Essen zu bestellen</h1>
+            <h3 className="header2">Jetzt ein diazo in Deiner Nähe finden</h3>
+            <div
               style={{
                 display: "flex",
                 alignItems: "center",
-                justifyContent: "center",
-                backgroundColor: "transparent",
-                border: "none",
-                outline: "none",
-                padding: "8px",
+
+                border: "1px solid #000",
+                borderRadius: "20px",
+                padding: "4px",
+                backgroundColor: "white",
               }}
             >
-              <SearchIcon style={{ color: "#000" }} />
-            </button>
-          </div>
-          <ul>
-            {cityResults.map((result) => (
-              <li key={result.place_id}>{result.description}</li>
-            ))}
-          </ul>
-        </section>
-      </div>
+              <IconButton
+                color="primary"
+                aria-label="menu"
+                style={{ padding: "8px" }}
+              >
+                <LocationOnIcon /> {/* Render the menu icon */}
+              </IconButton>
+              <input
+                type="text"
+                placeholder="Search City"
+                style={{
+                  width: "calc(100% - 88px)",
+                  height: "100%",
+                  padding: "8px",
+                  fontSize: "16px",
+                  border: "none",
+                  outline: "none",
+                }}
+                onChange={(e) => handleSearchChange(e.target.value)}
+              />
+              <button
+                type="button"
+                style={{
+                  display: "flex",
+                  alignItems: "center",
+                  justifyContent: "center",
+                  backgroundColor: "transparent",
+                  border: "none",
+                  outline: "none",
+                  padding: "8px",
+                }}
+              >
+                <SearchIcon style={{ color: "#000" }} />
+              </button>
+            </div>
+            <ul>
+              {cityResults.map((result) => (
+                <li key={result.place_id}>{result.description}</li>
+              ))}
+            </ul>
+          </section>
+        </div>
 
-      {/* Right Part */}
-      <div
-        className="rightPart"
-        style={{
-          position: "absolute",
-          top: 0,
-          right: 0,
-          bottom: 0,
-          width: "30%",
-          backgroundColor: "white",
-        }}
-      >
+        {/* Right Part */}
         <div
+          className="rightPart"
           style={{
-            position: "relative",
-            width: "100%",
-            height: "100%",
-            display: "flex",
-            flexDirection: "column",
-            justifyContent: "space-between",
-            alignItems: "center",
+            position: "absolute",
+            top: 0,
+            right: 0,
+            bottom: 0,
+            width: "30%",
+            backgroundColor: "white",
           }}
         >
-          <div>
-            <img
-              src={process.env.PUBLIC_URL + "/assests/pizza.png"}
-              alt="Pizza"
-              style={{ width: "100%", height: "auto", border: "none" }}
-            />
-          </div>
-          <div>
-            <img
-              src={process.env.PUBLIC_URL + "/assests/burger.png"}
-              alt="Burger"
-              style={{ width: "100%", height: "auto", border: "none" }}
-            />
+          <div
+            style={{
+              position: "relative",
+              width: "100%",
+              height: "100%",
+              display: "flex",
+              flexDirection: "column",
+              justifyContent: "space-between",
+              alignItems: "center",
+            }}
+          >
+            <div>
+              <img
+                src={process.env.PUBLIC_URL + "/assests/pizza.png"}
+                alt="Pizza"
+                style={{ width: "auto%", height: "auto", border: "none" }}
+              />
+            </div>
+            <div>
+              <img
+                src={process.env.PUBLIC_URL + "/assests/burger.png"}
+                alt="Burger"
+                style={{ width: "auto%", height: "auto", border: "none" }}
+              />
+            </div>
           </div>
         </div>
-      </div>
-    </div>
+      </section>
+      <section
+        style={{
+          display: "flex",
+          flexDirection: "column",
+          alignItems: "center",
+          backgroundColor: "white",
+          padding:"5%"
+        }}
+      >
+        <p className="sectionSubHeading">Diazo-delivery.de</p>
+        <h2 className="sectionHeading">Deine Zeit.</h2>
+      </section>
+      <section>Section3</section>
+    </>
   );
 }
